@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DS INFO TECH - Products</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <!-- Loader Section -->
+  <div class="loader-container">
+    <div class="loader">
+      <svg viewBox="0 0 80 80">
+        <circle cx="40" cy="40" r="32"></circle>
+      </svg>
+    </div>
+    <div class="loader triangle">
+      <svg viewBox="0 0 86 80">
+        <polygon points="43 8 79 72 7 72"></polygon>
+      </svg>
+    </div>
+    <div class="loader">
+      <svg viewBox="0 0 80 80">
+        <rect x="8" y="8" width="64" height="64"></rect>
+      </svg>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <nav>
+    <div class="container">
+      <a href="index.html" class="logo">DS INFO TECH</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="tools.html">Tools</a></li>
+        <li>
+          <div class="theme-toggle-container">
+            <label class="theme-toggle" id="theme-toggle">
+              <input type="checkbox">
+              <span class="slider"></span>
+            </label>
+            <span class="mode-text">Light Mode</span>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Products Section -->
+  <section id="services" class="services">
+    <div class="container">
+      <h2>Our Products</h2>
+      <div class="product-grid">
+        <!-- Busy21 Software -->
+        <div class="product-card" id="busy21">
+          <div class="product-image-wrapper">
+            <img src="https://i.ibb.co/x8YPrXQ7/busy-21-business-accounting-software.jpg" alt="Busy21 Software" class="product-image">
+            <div class="qr-code" id="qr-busy21">
+              <img src="https://i.ibb.co/b5cvVNV2/Whats-App-Image-2025-02-21-at-10-07-51-AM.jpg" alt="QR Code">
+            </div>
+          </div>
+          <div class="product-info">
+            <h3>Busy21 Software</h3>
+            <p>Manage your business effortlessly with Busy21 software. Choose the plan that suits you:</p>
+            <select id="busy21-mode" class="mode-select" onchange="updatePrice('busy21')">
+              <option value="3000">Basic - Rs 3000</option>
+              <option value="4000">Standard - Rs 4000</option>
+              <option value="5000">Enterprise - Rs 5000</option>
+            </select>
+            <p class="price" id="busy21-price">Price: Rs 3000</p>
+            <button class="purchase-btn" onclick="toggleQR('qr-busy21')">Pay Now</button>
+            <button class="screenshot-btn" id="screenshot-btn-busy21" onclick="sendScreenshot('busy21')">
+              Click here to send Screenshot & AnyDesk ID
+            </button>
+            <p class="thanks-message" id="thanks-busy21">Thanks for your payment!</p>
+          </div>
+        </div>
+
+        <!-- Add other products similarly -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 DS INFO TECH | All Rights Reserved</p>
+      <div class="social-media">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
